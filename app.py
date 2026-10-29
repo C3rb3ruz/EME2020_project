@@ -18,7 +18,7 @@ model = joblib.load('model.pkl')
 scaler = joblib.load('scaler.pkl')
 features = joblib.load('features.pkl')
 
-# Feature averages (used when a field is left blank)
+# Feature averages (used when a field is left blank) Remove this if we want to entirely disable a feature
 FEATURE_MEANS = dict(zip(features, scaler.mean_))
 
 # ---------------------------------------------------------------------------
@@ -66,7 +66,7 @@ FIELD_CONFIG = {
         'example': '133',
         'hint': '0 to 200 scale'
     },
-    'Nacionality': {
+    'Nationality': {
         'min': 1, 'max': 109, 'step': 1,
         'example': '1',
         'hint': '1 = Portuguese'
